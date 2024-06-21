@@ -1,0 +1,105 @@
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.App {
+  text-align: center;
+  animation: slideUp 2.5s ease; 
+  margin-top: -220px;
+}
+
+.Photo{
+  position: relative;
+}
+
+.Foto {
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+  border: solid 2px white;
+  margin: 50px;
+}
+
+.Icons{
+  border: solid 1px #fff2f1;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #f9d9dc;
+}
+
+.Icons:active {
+  background-color: #fff2f1; 
+}
+
+.Icons .iconify {
+  font-size: 2rem; 
+  cursor: pointer;
+}
+
+.whatsapp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whatsapp-number {
+  font-size: 12px;
+  color: white;
+}
+
+.Footer{
+  font-size: 15px;
+  color: #fff2f1;
+}
+
+.Text {
+  margin-bottom: 20px;
+  color: #fff2f1;
+}
+
+@media (max-width: 600px) {
+  .Text {
+    font-size: 1.2rem; 
+  }
+}
+
+.Background {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px; 
+  z-index: 1; 
+  /*animation: slideUp 2.5s ease;*/
+}
+
+.Backgroundfoto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./components/images/backgroundfoto.jpg');
+  background-size: cover;
+  background-size: 100% auto;
+  z-index: -2; /* Ensure the background stays behind other content */
+}
+
+.App,
+.Photo,
+.Text,
+.Socials,
+.Footer {
+  position: relative;
+  z-index: 2; 
+}
